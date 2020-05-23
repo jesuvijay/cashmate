@@ -1,0 +1,131 @@
+
+    @Override
+    public View getChildView(final int groupPosition, final int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+        final ArrayList<GroupListData> items = mListDataChild.get(mListDataHeader.get(groupPosition).getTitle());
+        final GroupListData item = items.get(childPosition);
+        if (items.size() > 0) {
+            if (!item.isLast()) {
+                convertView = mInflater.inflate(R.layout.exlv_list_item, null);
+                List<String> keySets = new ArrayList<>(mListDataChild.keySet());
+                final String key = keySets.get(groupPosition);
+
+                final TextView title = convertView.findViewById(R.id.title);
+                final TextView total = convertView.findViewById(R.id.total);
+                final EditText bags = convertView.findViewById(R.id.bags);
+                EditText loose = convertView.findViewById(R.id.loose);
+                RelativeLayout bagsLyt = convertView.findViewById(R.id.bagsLyt);
+
+                if (item.getType().equals("others")) {
+                    loose.setVisibility(View.GONE);
+                    loose = convertView.findViewById(R.id.loose2);
+                    loose.setVisibility(View.VISIBLE);
+                }
+
+                title.setText(item.getTitle());
+                total.setText(CommonFun.currencyValue(mContext, item.getTotal()));
+                bags.setText(item.getBags());
+                loose.setText(item.getLoose());
+                bags.setEnabled(item.getBundles() > 0 );
+
+                updateTotal(groupPosition, childPosition, item, total, item.getBags(), item.getLoose());
+
+                int view = (item.getType().equals("others")) ? View.GONE : View.VISIBLE;
+                bags.setVisibility(view);
+                bagsLyt.setVisibility(view);
+                final TextView pcsTotalTitle = convertView.findViewById(R.id.pcsTotalTitle);
+                final TextView amtTotalTitle = convertView.findViewById(R.id.amtTotalTitla);
+                final TextView pcsTotalValue= convertView.findViewById(R.id.pcsTotalValue);
+                final TextView amtTotalValue = convertView.findViewById(R.id.amtTotalValue);
+
+
+                bags.addTextChangedListener(
+                    new TextWatcher() {
+
+                      @Override
+                      public void afterTextChanged(Editable s) {}
+
+                      @Override
+                      public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+                      @Override
+                      public void onTextChanged(CharSequence s, int start, int before, int count) {
+                        updateTotal(groupPosition, childPosition, item, total, s.toString(), item.getLoose());
+                        updateValue(items);
+                          float total = getUpdatedTotal(items);
+                          float pcs = getUpdatedPcs(items);
+                          pcsTotalValue.setText(String.valueOf(pcs));
+                          amtTotalValue.setText(String.valueOf(total));
+                      }
+                    });
+
+                loose.addTextChangedListener(
+                    new TextWatcher() {
+
+                      @Override
+                      public void afterTextChanged(Editable s) {}
+
+                      @Override
+                      public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+                      @Override
+                      public void onTextChanged(CharSequence s, int start, int before, int count) {
+                        updateTotal(groupPosition, childPosition, item, total, item.getBags() + "", s.toString());
+                        updateValue(items);
+                          float total = getUpdatedTotal(items);
+                          float pcs = getUpdatedPcs(items);
+                          pcsTotalValue.setText(String.valueOf(pcs));
+                          amtTotalValue.setText(String.valueOf(total));
+
+                      }
+                    });
+
+                String type = "";
+
+//                switch (item.getType()) {
+//                    case "coins":
+//                        type = "Coins ";
+//                        HomeFragment.notesPcsValue2 = pcsTotalValue;
+//                        HomeFragment.notesTotalValue2 = amtTotalValue;
+//                        dtInterface.setCoinsTextViewValues(pcsTotalValue, amtTotalValue, items);
+////                        dtInterface.onSetCoinsValues(items);
+//                        float total = getUpdatedTotal(items);
+//                        float pcs = getUpdatedPcs(items);
+//                        pcsTotalValue.setText(pcs + "");
+//                        amtTotalValue.setText(total + "");
+//                        break;
+//                    case "notes":
+//                        type = "Notes ";
+//                        HomeFragment.coinsPcsValue2 = pcsTotalValue;
+//                        HomeFragment.coinsTotalValue2 = amtTotalValue;
+//                        dtInterface.setNotesTextViewValues(pcsTotalValue, amtTotalValue, items);
+////                        dtInterface.onSetNotesValues(items);
+//                        total = getUpdatedTotal(items);
+//                        pcs = getUpdatedPcs(items);
+//                        pcsTotalValue.setText(pcs + "");
+//                        amtTotalValue.setText(total + "");
+//                        break;
+//                    case "others":
+//                        type = "Others ";
+//                        HomeFragment.othersTotalValue2 = amtTotalValue;
+//                        dtInterface.setOthersTextViewValues(amtTotalValue, items);
+////                        dtInterface.onSetOthersValues(items);
+//                        total = getUpdatedTotal(items);
+//                        amtTotalValue.setText(total + "");
+//                        pcsTotalTitle.setVisibility(View.GONE);
+//                        pcsTotalValue.setVisibility(View.GONE);
+//                        break;
+//                }
+                pcsTotalTitle.setText(strPcs);
+                amtTotalTitle.setText(type + strTotal);
+
+            }
+            else {
+                convertView = mInflater.inflate(R.layout.exlv_list_last_item, null);
+
+            }
+
+        } else {
+            convertView = mInflater.inflate(R.layout.exlv_layout_blank, null);
+        }
+        return convertView;
+    }
