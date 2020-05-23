@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.kasi.cashmate.ui.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/exlv_content_main_page" />
+
+    <fragment
+        android:id="@+id/nav_coins"
+        android:name="com.kasi.cashmate.ui.coins.CoinsFragment"
+        android:label="@string/menu_coins"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.kasi.cashmate.ui.notes.NotesFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
+        android:id="@+id/nav_others"
+        android:name="com.kasi.cashmate.ui.others.OthersFragment"
+        android:label="@string/menu_others"
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
+        android:id="@+id/nav_saved"
+        android:name="com.kasi.cashmate.ui.saved_transactions.SavedTransactionsFragment"
+        android:label="@string/menu_saved"
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.kasi.cashmate.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_list" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_report"
+        android:name="com.kasi.cashmate.ui.report.ReportFragment"
+        android:label="@string/menu_report"
+        tools:layout="@layout/fragment_report" />
+
+    <fragment
+        android:id="@+id/nav_exit"
+        android:name="com.kasi.cashmate.ui.settings.SettingsFragment"
+        android:label="@string/menu_exit"
+        tools:layout="@layout/fragment_list" />
+
+</navigation>

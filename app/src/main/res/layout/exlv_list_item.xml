@@ -1,0 +1,74 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/selector_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="@color/grey"
+        android:id="@+id/topColor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="7dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/title"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            style="@style/TextView3"
+            android:text="0 x"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:id="@+id/bagsLyt"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/bags"
+                style="@style/NumericEditText1"
+                android:hint="0"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/loose"
+                style="@style/DecimalEditText1"
+                android:hint="0"/>
+
+            <EditText
+                android:id="@+id/loose2"
+                android:visibility="gone"
+                style="@style/DecimalEditText3"
+                android:hint="0"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/total"
+            android:gravity="right"
+            android:paddingRight="15dp"
+            android:layout_weight="1"
+            style="@style/TextView3"
+            android:text="0.00"/>
+
+    </LinearLayout>
+
+</LinearLayout>

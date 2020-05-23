@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_list_item"
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:paddingTop="6dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0px"
+            android:paddingBottom="2px"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10px">
+
+            <TextView
+                android:id="@+id/denomination"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/TextView3"
+                android:text="Description"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="2px">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2px">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/edit"
+                            android:visibility="gone"
+                            android:layout_marginRight="5px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_others" />
+
+                        <ImageView
+                            android:id="@+id/delete"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_coin" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="#F00"
+        android:id="@+id/topColor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            style="@style/TextView2"
+            android:text="Product Name"/>
+
+        <TextView
+            android:id="@+id/bags"
+            android:gravity="center"
+            style="@style/TextView2"
+            android:text="No. of Bundles"/>
+
+        <TextView
+            android:id="@+id/value"
+            android:gravity="center"
+            style="@style/TextView2"
+            android:text="Loose (pics)"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:padding="3dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/total"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                style="@style/TextView2"
+                android:text="Total"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/down"
+                android:gravity="center"
+                android:id="@+id/arrow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

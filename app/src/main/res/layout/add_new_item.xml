@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:textStyle="bold"
+        android:text="@string/title_save_note"
+        style="@style/TextView1"/>
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_denomination"
+        style="@style/TextView5"
+        android:layout_marginTop="10dp"
+        android:hint="@string/title_denomination" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/value_denomination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/NumericEditText2" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_bundles"
+        style="@style/TextView5"
+        android:layout_marginTop="10dp"
+        android:hint="@string/title_bundles" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/value_bundles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            style="@style/NumericEditText2" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

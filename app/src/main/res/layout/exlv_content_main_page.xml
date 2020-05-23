@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/linear1"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/totalTitle"
+                    style="@style/TextView1"
+                    android:gravity="left"
+                    android:paddingLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="Cash Total: "/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/totalValue"
+                    style="@style/TextView1"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:paddingRight="15dp"
+                    android:layout_weight="1"
+                    android:text="0.00"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/linear2"
+            android:layout_below="@+id/linear1"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160px"
+                android:background="@color/white">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField"
+                    android:layout_width="500px"
+                    android:layout_height="wrap_content"
+                    android:hint="Teller Amt.(Optional)" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/DecimalEditText2"
+                        android:id="@+id/tellerAmt"
+                        android:textSize="13sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:id="@+id/linear3"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/amtTotalTitle"
+                        style="@style/TextView1"
+                        android:text="Excess: "/>
+                    <TextView
+                        android:id="@+id/amtTotalValue"
+                        style="@style/TextView1"
+                        android:text="0"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/expandable_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:groupIndicator="@null"
+            android:divider="@color/transparent"
+            android:layout_below="@+id/linear2"
+            android:transcriptMode="disabled"
+            android:listSelector="@color/transparent" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_below="@+id/expandable_listview"
+            android:id="@+id/bottomColor"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

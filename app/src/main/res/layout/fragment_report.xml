@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relative00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:text="@string/sample" />
+
+        <ScrollView
+            android:id="@+id/scroll1"
+            android:layout_below="@+id/test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/relative0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/relative01"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/sample" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/title_cash_Report"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/as_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_as_on" />
+
+                        <TextView
+                            android:id="@+id/date_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/as_on"
+                            android:text="@string/sample" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_below="@+id/relative1"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/black"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/cash_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/title_cash_total"
+                            android:textSize="19dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cash_total_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/cash_total"
+                            android:text="@string/sample"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_below="@+id/relative3"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/black"
+                        android:orientation="horizontal" />
+
+
+                    <!-- Notes -->
+
+                    <RelativeLayout
+                        android:id="@+id/notesRelative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative4">
+
+                        <TextView
+                            android:id="@+id/notes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/notes"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/notes"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relative5"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/total_pcs_notes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.2dp"
+                                android:text="@string/title_total_pcs"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/total_pcs_notes_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toEndOf="@+id/total_pcs_notes"
+                                android:text="@string/sample"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative7"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/relative6"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/relative7"
+                            android:layout_marginTop="3dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal">
+
+                            <ListView
+                                android:id="@+id/notesList"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative9"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/relative8"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                    </RelativeLayout>
+
+
+                    <!-- Coins -->
+
+
+                    <RelativeLayout
+                        android:id="@+id/coinsRelative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/notesRelative">
+
+                        <TextView
+                            android:id="@+id/coins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/coins"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative10"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/coins"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relative10"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/total_pcs_coins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.2dp"
+                                android:text="@string/title_total_pcs"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/total_pcs_coins_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toEndOf="@+id/total_pcs_coins"
+                                android:text="@string/sample"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative12"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/relative11"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative13"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/relative12"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal">
+
+                            <ListView
+                                android:id="@+id/coinsList"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative14"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/relative13"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                    </RelativeLayout>
+
+                    <!-- Others -->
+
+
+                    <RelativeLayout
+                        android:id="@+id/othersRelative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/coinsRelative">
+
+                        <TextView
+                            android:id="@+id/others"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/others"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative15"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/others"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative16"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relative15"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/total_pcs_others"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.2dp"
+                                android:text="@string/title_total_pcs"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/total_pcs_others_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toEndOf="@+id/total_pcs_others"
+                                android:text="@string/sample"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative17"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/relative16"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative18"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/relative17"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal">
+
+                            <ListView
+                                android:id="@+id/othersList"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative19"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/relative18"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey"
+                            android:orientation="horizontal" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/eor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/othersRelative"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/eor"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

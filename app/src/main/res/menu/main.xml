@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_new_notes"
+        android:orderInCategory="1"
+        android:icon="@mipmap/ic_notes"
+        android:title="@string/action_new_notes"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_new_coins"
+        android:orderInCategory="2"
+        android:icon="@mipmap/ic_coin"
+        android:title="@string/action_new_coins"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_others"
+        android:orderInCategory="3"
+        android:icon="@mipmap/ic_others"
+        android:title="@string/action_others"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_reset"
+        android:orderInCategory="4"
+        android:icon="@mipmap/ic_settings"
+        android:title="@string/action_reset"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="5"
+        android:icon="@mipmap/ic_save_list"
+        android:title="@string/action_save"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="6"
+        android:icon="@mipmap/ic_exit"
+        android:title="@string/action_share"
+        android:visible="false"
+        app:showAsAction="always" />
+</menu>
