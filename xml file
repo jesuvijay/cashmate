@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector_list_item"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/topColor"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextView3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="15dp"
+            android:text="0 x"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/bagsLyt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/bags"
+                style="@style/NumericEditText1"
+                android:hint="0" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/loose"
+                style="@style/DecimalEditText1"
+                android:hint="0" />
+
+            <EditText
+                android:id="@+id/loose2"
+                style="@style/DecimalEditText3"
+                android:hint="0"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/total"
+            style="@style/TextView3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="15dp"
+            android:text="0.00" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/exlv_list_last_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
